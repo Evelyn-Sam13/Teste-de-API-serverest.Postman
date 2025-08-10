@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "8b9ee77e-3d99-409e-beff-2baee1ab3bf4",
+		"name": "Teste de API - Serverest",
+		"description": "**Treinamento de testes de API** utilizando o [Serverest.dev](https://serverest.dev) para simular operações de **CRUD** em produtos (criar, atualizar, listar e excluir). Coleção configurada com variáveis e requisições automatizadas no Postman para facilitar os testes e a reutilização.  \n\n- `baseUrl` = `https://serverest.dev`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40780043"
+	},
+	"item": [
+		{
+			"name": "Criar produto",
+			"item": [
+				{
+					"name": "Criar produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV2eXNhbWFyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzU0Nzk1MTg1LCJleHAiOjE3NTQ3OTU3ODV9.mOrgc3jdxA6qa_fTqWpNyAWnhBfjpCIh6hePcYMKPy0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"CAIXA DE SOM\",\r\n  \"preco\": 300,\r\n  \"descricao\": \"SOM\",\r\n  \"quantidade\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/produtos",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atualizar Produto",
+			"item": [
+				{
+					"name": "Atualizar Produtos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV2eXNhbWFyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzU0Nzk1MTg1LCJleHAiOjE3NTQ3OTU3ODV9.mOrgc3jdxA6qa_fTqWpNyAWnhBfjpCIh6hePcYMKPy0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"TV SAMSUNG\",\r\n  \"preco\": 4500,\r\n  \"descricao\": \"tesqer07\",\r\n  \"quantidade\": 450\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/produtos/Sjl6R0blN3meoo5u",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"Sjl6R0blN3meoo5u"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Excluir Produto",
+			"item": [
+				{
+					"name": "Excluir produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV2eXNhbWFyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzU0Nzk1MTg1LCJleHAiOjE3NTQ3OTU3ODV9.mOrgc3jdxA6qa_fTqWpNyAWnhBfjpCIh6hePcYMKPy0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/produtos/QNrKLH6zxWQs6gbD",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"QNrKLH6zxWQs6gbD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "https://serverest.dev/",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"evysamar@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serverest.dev/login",
+					"protocol": "https",
+					"host": [
+						"serverest",
+						"dev"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste produtos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV2eXNhbWFyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzU0Nzk0NjI5LCJleHAiOjE3NTQ3OTUyMjl9.0M6ZUSbd7VokN2y8v1_4dtH7wt7wxRLkXFwx6oDnDv4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serverest.dev/produtos",
+					"protocol": "https",
+					"host": [
+						"serverest",
+						"dev"
+					],
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
